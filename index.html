@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap"
+        rel="stylesheet"
+    />
+    <script
+        src="https://kit.fontawesome.com/{replace_with_your_id}.js"
+        crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+        <main class="app">
+        <header class="header">
+            <button><i class="fa-solid fa-bars"></i></button>
+            <input type="search" id="search" value="Search currency..." readonly />
+        </header>
+        <section class="top-rated">
+            <div class="top-rated-coin" id="top-rated">
+            <p class="percent" id="percent">5%</p>
+            <p class="price" id="price">$3,000</p>
+            <p class="img">
+                <img
+                id="img"
+                src="https://static.coinstats.app/coins/1650455588819.png"
+                alt="coin_name"
+                />
+                <span id="name">Bitcoin</span>
+            </p>
+            </div>
+        </section>
+        <section class="sticky-card">
+            <div class="card" id="card">
+            <div id="0" class="card-item top">
+                <p>0.61%</p>
+                <p class="price">$22,878.96</p>
+                <p>BTC</p>
+            </div>
+
+            <div id="1" class="card-item next">
+                <p>0.22%</p>
+                <p class="price">$1,635.81</p>
+                <p>ETH</p>
+            </div>
+            </div>
+        </section>
+        <section class="list-holder">
+            <div class="list" id="list">
+            <div class="list-item-holder">
+                <div class="list-items">
+                <div class="list-img-name">
+                    <img
+                    src="https://static.coinstats.app/coins/1650455588819.png"
+                    alt="Bitcoin"
+                    />
+                    <p>BTC</p>
+                </div>
+                <div class="list-price">
+                    <p class="price">$22,730.41</p>
+                    <p class="mc">1d chg <span class="bearish">-0.81%</span></p>
+                </div>
+                </div>
+                <div class="more">
+                <p class="name">
+                    <img
+                    src="https://static.coinstats.app/coins/1650455588819.png"
+                    alt="Bitcoin"
+                    />
+                    <span>Bitcoin</span>
+                </p>
+                <p class="txt"><span>Max Supply</span><span>21000000</span></p>
+                <p class="txt"><span>Av. Supply</span><span>19270075</span></p>
+                <p class="txt">
+                    <span>Mk. Cap.</span><span>438016629794.32806</span>
+                </p>
+                <p class="txt">
+                    <span>1d Price</span><span class="bearish">-0.81%</span>
+                </p>
+                <a class="exp" href="https://blockchair.com/bitcoin/">Explore</a>
+                </div>
+            </div>
+            </div>
+        </section>
+        </main>
+    </body>
+    <script src="./js/app.js"></script>
+</html>

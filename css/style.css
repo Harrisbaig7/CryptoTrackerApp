@@ -1,0 +1,271 @@
+    :root {
+        --primary: #01996a;
+        --primary-dark: #064531;
+        --business: #3a82ee;
+        --light: #eee;
+        --gray: #888;
+        --dark: #313154;
+        --danger: #e94738;
+        --white: #fff;
+    
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        font-family: "montserrat", sans-serif;
+    }
+    
+    .bearish {
+        color: var(--danger);
+    }
+    .bullish {
+        color: var(--primary);
+    }
+    
+    body {
+        background-color: var(--light);
+    }
+    
+    .app {
+        width: 40%;
+        margin: 0 auto;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        background-color: var(--primary);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    
+    .header button,
+    input {
+        outline: none;
+        background-color: transparent;
+        appearance: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--light) !important;
+        padding: 1rem;
+        transition: 0.2s ease-in-out;
+    }
+    
+    .header button:hover {
+        cursor: pointer;
+        background-color: var(--primary-dark);
+    }
+    
+    .header input {
+        flex: 1 1 0%;
+        font-weight: 400;
+    }
+    
+    .top-rated {
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(to top, #fff, rgba(1, 153, 105, 0.4));
+        color: var(--primary-dark);
+        padding: 2rem 0;
+    }
+    
+    .top-rated .top-rated-coin {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        opacity: 1;
+    }
+    
+    .top-rated-coin .percent {
+        font-weight: 500;
+        font-size: larger;
+    }
+    
+    .top-rated-coin .img {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .top-rated-coin .img img {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .price {
+        font-weight: 700;
+        font-size: x-large;
+    }
+    
+    .sticky-card {
+        position: sticky;
+        top: 8%;
+        padding: 1rem 0 0 0;
+        background-color: rgba(255, 255, 255, 0.786);
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        z-index: 1;
+    }
+    
+    .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.57rem;
+        background-color: rgba(255, 255, 255, 0.786);
+    }
+    
+    .card-item,
+    .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--primary);
+        color: var(--light);
+        border-radius: 0.5rem;
+        min-height: 85px;
+        padding: 0.5rem 0;
+        font-weight: 500;
+    }
+    
+    .card-item.next {
+        background-color: var(--danger);
+    }
+    
+    .list-holder {
+        z-index: -1;
+    }
+    
+    .list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .list-item-holder {
+        display: relative;
+    }
+    
+    .list-item-holder:hover > .more {
+        opacity: 1;
+    }
+    
+    .list-items {
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: var(--shadow);
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: 0.2s ease-in-out;
+    }
+    
+    .list-items:hover {
+        cursor: pointer;
+        background-color: rgba(1, 153, 105, 0.298);
+        position: relative;
+    }
+    
+    .more {
+        height: auto;
+        width: 180px;
+        position: absolute;
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        right: 4%;
+        border-radius: 0.5rem;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        padding: 1rem;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .more:hover {
+        opacity: 1;
+    }
+    
+    .more .name {
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: start;
+    }
+    
+    .more .txt {
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .more .exp {
+        color: var(--primary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    
+    .more img {
+        height: 30px;
+        width: 30px;
+    }
+    
+    .list-items .list-img-name {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bolder;
+        font-size: larger;
+    }
+    
+    .list-img-name img {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .list-items .list-price {
+        text-align: right;
+    }
+    
+    .list-price .price {
+        font-weight: 600;
+        font-size: medium;
+        color: var(--dark);
+    }
+    
+    .list-price .mc {
+        font-size: 0.7rem;
+        color: var(--gray);
+        font-weight: 600;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .app {
+        width: 100%;
+        }
+    
+        .sticky-card {
+        top: 7%;
+        padding: 1rem 1rem 1rem;
+        }
+    
+        .list-holder {
+        padding: 0 1rem;
+        }
+    }
